@@ -1,14 +1,8 @@
 import Vue from 'vue';
 
-Vue.config.debug = true;
+import App from './components/App.vue';
 
-const App = Vue.component('App',{
-	data(){
-		return {
-			message:'hello vue'
-		}
-	}
-})
+Vue.config.debug = true;
 
 new Vue({
 	el:'#app',
