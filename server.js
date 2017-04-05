@@ -40,6 +40,12 @@ app.post("/update",function(req,res){
 	})
 })
 
+app.get("/getstudents",function(req,res){
+	datahundle.selectData("data/students.json",function(err,data){
+		res.send(data);
+	})
+})
+
 
 
 
