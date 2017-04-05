@@ -2,7 +2,9 @@ var fs = require("fs");
 
 var addData = function(dataUrl,option,next){
 	fs.readFile(dataUrl,"utf8",function(err,data){
+		
 		if(!err){
+			console.log(option);
 			var userList = JSON.parse(data);
 			userList.push(option);
 			var userStr = JSON.stringify(userList,null,4);
