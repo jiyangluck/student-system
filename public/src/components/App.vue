@@ -32,11 +32,13 @@
 		},
 		methods:{
 			getData(){
-				alert('hehe')
-				this.$http.get('./data/students.json').then(function(res){
+				this.$http.get('/getstudents').then(function(res){
 					this.students = res.data;
 				})
 			}
+		},
+		mounted(){
+			this.getData();
 		}
 	}
 </script>
